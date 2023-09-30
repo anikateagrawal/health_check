@@ -1,0 +1,15 @@
+.sym{
+    padding: 100px;
+}
+
+.sp{
+    background-color: rgba(128, 128, 128, 0.29);
+    /* opacity: 0.5; */
+    padding: 30px;
+    border-radius: 20px;
+}
+.sp2{
+    background-color: gray;
+    opacity: 1;
+    border-radius: 20px;
+}
