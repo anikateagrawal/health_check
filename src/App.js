@@ -16,7 +16,8 @@ function App() {
       setResult({
         disease: "Fully Fit and Fine",
         description: "Enjoy Life",
-        precautions: ["Avoid FastFood"],
+        precautions: ["Avoid Fast Food"],
+        symptoms:['Healthy Lifestyle']
       });
       return;
     }
@@ -54,6 +55,13 @@ function App() {
         <div>
           {result !== "" ? (
             <p>Precautions : {result.precautions.join(" , ")}</p>
+          ) : (
+            ""
+          )}
+        </div>
+        <div>
+          {result !== "" ? (
+            <p>All Symptoms : {result.symptoms.join(" , ")}</p>
           ) : (
             ""
           )}
