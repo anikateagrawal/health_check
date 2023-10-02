@@ -1,4 +1,5 @@
 import './Nav.scss';
+import {Link} from "react-router-dom";
 
 const Nav = () => {
   return (
@@ -22,9 +23,14 @@ const Nav = () => {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="<%=url%>">
-                  Health-Check
-                </a>
+                <Link to="/" class="nav-link " aria-current="page">
+                  Disease Predictor
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link to="/symptomPrediction" class="nav-link ">
+                   Symptoms Predictor 
+                </Link>
               </li>
               <li class="nav-item">
                 <a class="nav-link " aria-current="page" href="/doctors">
