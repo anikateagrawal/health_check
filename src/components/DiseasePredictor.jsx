@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { url } from '../config';
 import { symptoms } from '../context/symptoms';
 import Symptom from './Symptom';
+import { durl } from '../config';
 
 const DiseasePredictor = () => {
     const {diseasesData}=useContext(symptoms);
@@ -59,7 +60,7 @@ const DiseasePredictor = () => {
           {result !== "" ? <p>Description : {result.description}</p> : ""}
         </div>
         <div>
-          {result !== "" ? <p>Specialist : {result.specialist}</p> : ""}
+          {result !== "" ? <a href={durl+`/doctors/type/${result.specialist}`}><p>Specialist : {result.specialist}</p></a> : ""}
         </div>
     </div>
   )

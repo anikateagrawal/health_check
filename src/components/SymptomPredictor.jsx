@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useContext } from 'react'
 import { symptoms } from '../context/symptoms'
+import { durl } from '../config'
 
 const SymptomPredictor = () => {
     const {diseasesData}=useContext(symptoms);
@@ -12,7 +13,7 @@ const SymptomPredictor = () => {
         <select name="disease" id="disease" className='form-control' defaultValue="none" onChange={()=>setResult(diseasesData[document.getElementById("disease").value])}>
             <option value="none">None</option>
             {Object.keys(diseasesData).map((d)=>
-                <option value={d}>{d}</option>
+                <option value={d} key={d}>{d}</option>
             )}
         </select>
         <div>
@@ -27,7 +28,7 @@ const SymptomPredictor = () => {
               {result !== "" ? <p>Description : {result.description}</p> : ""}
             </div>
             <div>
-              {result !== "" ? <p>Specialist : {result.specialist}</p> : ""}
+              {result !== "" ? <a href={durl+`/doctors/type/${result.specialist}`}><p>Specialist : {result.specialist}</p></a> : ""}
             </div>
         </div>
     </div>
