@@ -10,6 +10,7 @@ function App() {
     return <div>
       <Nav />
       <Outlet/>
+      <h3 style={{color:'white'}}> Free Server takes time to deploy! Please wait 5 mins for app to load data!</h3>
     </div>
   }
 

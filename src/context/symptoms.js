@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react'
 import { url } from '../config';
 
@@ -12,11 +13,7 @@ export const SymptomsProvider=({children})=>{
       }})
     const [data,setData]=useState([]);
     async function columns(){
-        const res=await fetch(url,{
-            headers: new Headers({
-                "ngrok-skip-browser-warning": "69420",
-              }),
-        }).then((res)=>res.json());
+        const res=(await axios.get(url)).data;
         setData(res[0]);
         res[1]['none']={
             description: "Enjoy Life",
