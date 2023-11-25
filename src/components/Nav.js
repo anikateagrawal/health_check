@@ -34,13 +34,13 @@ const Nav = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="/doctors">
+                <a className="nav-link " aria-current="page" href={durl+"/doctors"}>
                   Doctors
                 </a>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <a className="nav-link" href={durl+"/about"}>
                   About
                 </a>
               </li>
