@@ -28,12 +28,12 @@ function App() {
           element:<DiseasePredictor/>
         },
         {
-          path:'*',
+          path:'/*',
           element:<DiseasePredictor/>
         }
       ]
     },
-  ])
+  ],{basename:"/health_check"})
   
   return (
     <div className="App">
