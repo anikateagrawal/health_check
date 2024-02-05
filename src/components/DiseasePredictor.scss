@@ -1,0 +1,8 @@
+.pred{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 50px;
+    background-image: linear-gradient(to bottom right,#59B4C3,#74E291,#211C6A);
+    font-weight: bold;
+    color: white;
+}

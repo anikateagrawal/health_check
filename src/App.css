@@ -4,7 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
+  /* background-color: green; */
+  /* background-image: url("./images/backgrd.png"); */
+  background-image: linear-gradient(#CAF7E3,#DDFFBC);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .sym{
