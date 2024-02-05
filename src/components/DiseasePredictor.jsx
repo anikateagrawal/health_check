@@ -3,6 +3,7 @@ import { url } from '../config';
 import { symptoms } from '../context/symptoms';
 import Symptom from './Symptom';
 import { durl } from '../config';
+import "./DiseasePredictor.scss";
 
 const DiseasePredictor = () => {
     const {diseasesData}=useContext(symptoms);
@@ -36,8 +37,10 @@ const DiseasePredictor = () => {
   const [result, setResult] = useState("");
 
   return (
-    <div className='sym'>
-        <div className="m-1">
+    <div className='sym pred'>
+      
+        <div className="m-1 pp1">
+        <div>
           <h3>Disease Predictor</h3>
           <p>Predicting Illnesses for Better Health</p>
         </div>
@@ -49,6 +52,8 @@ const DiseasePredictor = () => {
           ))}
         </div>
         <button onClick={predict} className="btn btn-primary">Predict</button>
+        </div>
+        <div className='pp1'>
         <div>{result !== "" ? <p>Prediction : {result.disease}</p> : ""}</div>
         <div>
           {result !== "" ? (<p>Precautions : {result.precautions.join(" , ")}</p>):("")}
@@ -60,7 +65,8 @@ const DiseasePredictor = () => {
           {result !== "" ? <p>Description : {result.description}</p> : ""}
         </div>
         <div>
-          {result !== "" ? <a href={durl+`/doctors/type/${result.specialist}`}><p>Specialist : {result.specialist}</p></a> : ""}
+          {result !== "" ? <a href={durl+`/doctors/type/${result.specialist}`}><p style={{color:'white'}}>Specialist : {result.specialist}</p></a> : ""}
+        </div>
         </div>
     </div>
   )
