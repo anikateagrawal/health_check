@@ -13,7 +13,7 @@
 
 .sym{
   margin: 100px 0px;
-  width: 800px;
+  /* width: 800px; */
   padding: 20px;
   background-color: white;
   display: flex;
@@ -26,7 +26,7 @@
 .s{
   display: flex;
   justify-content: space-between;
-  height: 40vh;
+  /* height: 40vh; */
   width: 100%;
   flex-direction: column;
   flex-wrap: wrap;

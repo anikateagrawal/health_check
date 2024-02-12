@@ -5,4 +5,16 @@
     background-image: linear-gradient(to bottom right,#59B4C3,#74E291,#211C6A);
     font-weight: bold;
     color: white;
+    margin: 0;
+}
+
+@media screen and (max-width:600px){
+    .pred{
+        grid-template-columns: repeat(1,1fr);
+    }
+    
+}
+
+.s2{
+    max-width: 1000px;
 }
